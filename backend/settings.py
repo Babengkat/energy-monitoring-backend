@@ -91,7 +91,7 @@ import os
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
+        default=os.getenv('postgresql://energy_monitoring_db_user:ASnezX6hel7TZoxUZBayl56j75OIRu7b@dpg-d0mvenbuibrs73f2unv0-a.oregon-postgres.render.com/energy_monitoring_db'),
         conn_max_age=600,
         ssl_require=True
     )
