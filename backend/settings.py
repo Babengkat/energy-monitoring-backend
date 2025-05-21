@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$c^_8keu3m%22b4775fmbzujj9zza5gs2p(-w$7v84l&!b)pce'
 
 # SECURITY WARNING: don't run with debug turned on in production!
- DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['your-backend-service.onrender.com', 'your-frontend.vercel.app']
 CORS_ALLOWED_ORIGINS = [
@@ -91,11 +91,12 @@ import os
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('postgresql://energy_monitoring_db_user:ASnezX6hel7TZoxUZBayl56j75OIRu7b@dpg-d0mvenbuibrs73f2unv0-a.oregon-postgres.render.com/energy_monitoring_db'),
+        default='postgresql://energy_monitoring_db_user:ASnezX6hel7TZoxUZBayl56j75OIRu7b@dpg-d0mvenbuibrs73f2unv0-a.oregon-postgres.render.com/energy_monitoring_db',
         conn_max_age=600,
         ssl_require=True
     )
 }
+
 
 
 
@@ -140,9 +141,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
