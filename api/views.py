@@ -9,6 +9,5 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 class EnergyReadingViewSet(viewsets.ModelViewSet):
     queryset = EnergyReading.objects.all().order_by('-timestamp')
     serializer_class = EnergyReadingSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [JWTAuthentication]
+    permission_classes = [AllowAny] 
 

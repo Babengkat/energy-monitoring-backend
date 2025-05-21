@@ -39,7 +39,7 @@ CORS_ALLOWED_ORIGINS = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        # You can add other authentication classes if you want
+        'rest_framework.permissions.AllowAny',
     ),
     # Other settings...
 }
