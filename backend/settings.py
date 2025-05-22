@@ -25,14 +25,9 @@ SECRET_KEY = 'django-insecure-$c^_8keu3m%22b4775fmbzujj9zza5gs2p(-w$7v84l&!b)pce
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'energy-monitoring-backend.onrender.com',
-    'energy-monitoring-frontend-rfvm.onrender.com',
-]
+ALLOWED_HOSTS = ['*']
 
-CORS_ALLOWED_ORIGINS = [
-    'https://energy-monitoring-frontend-rfvm.onrender.com',
-]
+CORS_ALLOWED_ORIGINS = True
 
 
 # Application definition
