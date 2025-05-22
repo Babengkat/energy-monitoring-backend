@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$c^_8keu3m%22b4775fmbzujj9zza5gs2p(-w$7v84l&!b)pce'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'energy-monitoring-backend.onrender.com',
